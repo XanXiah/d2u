@@ -1,11 +1,11 @@
-import { Body, Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('upsert/omni7')
+  @Post('upsert/omni7')
   async omni7_upsert(
     @Body()
     data: {
@@ -27,7 +27,7 @@ export class AppController {
     return res;
   }
 
-  @Get('upsert/ewelcia')
+  @Post('upsert/ewelcia')
   async eweicia_upsert(
     @Body()
     data: {
@@ -49,7 +49,7 @@ export class AppController {
     return res;
   }
 
-  @Get('upsert/promotion')
+  @Post('upsert/promotion')
   async promotion_upsert(
     @Body()
     data: {
